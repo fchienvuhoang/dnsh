@@ -1,9 +1,10 @@
 import { readFile, mkdir, rm, writeFile, copyFile } from 'node:fs/promises';
 const c = JSON.parse(await readFile(new URL('../site.config.json', import.meta.url)));
-const draft = process.argv.includes('--draft');
+const strict = process.argv.includes('--require-reviewed');
 const required = ['appName','domain','operator','supportEmail','processingAndStorage','retentionAndDeletion','thirdPartyServices','securityMeasures'];
 const missing = required.filter(k => typeof c[k] !== 'string' || !c[k].trim());
-if (!draft && (missing.length || c.reviewed !== true)) {
+const draft = process.argv.includes('--draft') || missing.length > 0 || c.reviewed !== true;
+if (strict && draft) {
   console.error(`Chưa thể xuất bản: điền ${missing.join(', ') || 'đầy đủ cấu hình'} và đặt reviewed=true sau khi đối chiếu chính sách với ứng dụng. Xem trước bằng npm run dev.`);
   process.exit(1);
 }

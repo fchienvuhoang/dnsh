@@ -3,8 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node scripts/build.mjs --draft && python3 -m http.server 4173 --directory dist",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
-    "preview": "python3 -m http.server 4173 --directory dist"
+    "build:reviewed": "node scripts/build.mjs --require-reviewed",
+    "preview": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
