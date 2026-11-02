@@ -1,0 +1,10 @@
+{
+  "name": "danasangha-branding",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build.mjs --draft && python3 -m http.server 4173 --directory dist",
+    "build": "node scripts/build.mjs",
+    "preview": "python3 -m http.server 4173 --directory dist"
+  }
+}

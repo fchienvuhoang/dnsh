@@ -1,0 +1,11 @@
+{
+  "appName": "danasangha",
+  "domain": "https://danasangha.org",
+  "operator": "",
+  "supportEmail": "fchienvuhoang@gmail.com",
+  "processingAndStorage": "danasangha đọc email Gmail để lấy tệp sao kê ngân hàng VIB và chuyển tệp sang chức năng bóc tách giao dịch chạy trên máy chủ Vercel. Theo mô hình vận hành của ứng dụng, dữ liệu Gmail và tệp sao kê không được lưu giữ lâu dài. Dữ liệu được xử lý để thực hiện yêu cầu của người dùng. Ứng dụng không sử dụng AI để đọc, xử lý hoặc lưu dữ liệu.",
+  "retentionAndDeletion": "",
+  "thirdPartyServices": "Ứng dụng sử dụng Google Gmail API để đọc email và lấy tệp sao kê khi người dùng cấp quyền. Vercel cung cấp hạ tầng máy chủ chạy chức năng nhận và bóc tách tệp sao kê; tệp được chuyển tới hạ tầng này để xử lý. Không chuyển dữ liệu Gmail hoặc sao kê tới dịch vụ AI để đọc, xử lý hoặc lưu trữ.",
+  "securityMeasures": "",
+  "reviewed": false
+}
