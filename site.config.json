@@ -3,7 +3,7 @@
   "domain": "https://danasangha.org",
   "operator": "",
   "supportEmail": "",
-  "processingAndStorage": "danasangha đọc email Gmail để lấy tệp sao kê ngân hàng khi người dùng cấp quyền, sau đó xử lý để bóc tách thông tin giao dịch. Dữ liệu giao dịch được lưu trữ trên Prisma Postgres để phục vụ việc tổng hợp và đối chiếu. Ứng dụng không sử dụng AI để đọc, xử lý hoặc lưu dữ liệu.",
+  "processingAndStorage": "danasangha xử lý dữ liệu từ các tệp sao kê do người dùng tải lên, tệp sao kê lấy từ Gmail khi người dùng sử dụng chức năng này và cấp quyền, hoặc dữ liệu giao dịch từ các nguồn thiện nguyện công khai được tích hợp. Dữ liệu giao dịch được lưu trữ trên Prisma Postgres để phục vụ việc tổng hợp và đối chiếu. Ứng dụng không sử dụng AI để đọc, xử lý hoặc lưu dữ liệu.",
   "retentionAndDeletion": "",
   "thirdPartyServices": "Ứng dụng sử dụng Google Gmail API để đọc email và lấy tệp sao kê khi người dùng cấp quyền. Prisma cung cấp dịch vụ cơ sở dữ liệu Prisma Postgres để lưu trữ dữ liệu giao dịch phục vụ các tính năng của sản phẩm. Không chuyển dữ liệu Gmail hoặc sao kê tới dịch vụ AI để đọc, xử lý hoặc lưu trữ.",
   "securityMeasures": "",
